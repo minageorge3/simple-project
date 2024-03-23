@@ -1,0 +1,371 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+:root {
+    --main-color: #450505;
+    --light-color: #a0a0a0;
+    --v-light-color: #fa370b11;
+    --dark-color: #fa370bcf;
+    --shadow: 2px 2px 3px #000;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.container {
+    width: 95%;
+    margin: .5rem auto;
+}
+
+.first-content {}
+
+header {
+    background-image: url(1.jpg);
+}
+
+.f-head {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+
+}
+
+.f-head ul {
+    display: flex;
+    gap: 1rem;
+}
+
+.f-head ul li a {
+    font-size: 1.5rem;
+    color: white;
+    padding: .3rem;
+    position: relative;
+}
+
+.f-head ul li a::before,
+.f-head ul li a::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    transform: scaleX(0);
+    transition: .4s ease-in-out;
+}
+
+.f-head ul li a::before {
+    top: 0;
+    transform-origin: left;
+}
+
+.f-head ul li a::after {
+    bottom: 0;
+    transform-origin: right;
+}
+
+.f-head ul li a:hover::before,
+.f-head ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+header .head {
+    text-align: center;
+    line-height: 1.5;
+    padding-bottom: 7rem;
+}
+
+header .head p {
+    font-size: 1.5rem;
+}
+
+header .head h2 {
+    color: var(--main-color);
+}
+
+/* second content */
+.second-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+}
+
+.second-content .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+    background-color: var(--v-light-color);
+    padding: 1rem;
+    margin: 1rem auto;
+
+}
+
+.second-content .box .box-head {
+    line-height: 1.5;
+    font-size: 1.2rem;
+
+}
+
+.second-content .box .box-head h2 {
+    padding-bottom: 1rem;
+}
+
+.second-content .box i {
+    font-size: 2rem;
+}
+
+@media (max-width:900px) {
+    .second-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+@media (max-width:650px) {
+    .second-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* end of second content */
+/* start of third content */
+.third-content {
+    text-align: center;
+    margin: 5rem auto;
+    padding: .5rem;
+    line-height: .7;
+
+}
+
+.third-content h2 {
+    font-size: 4rem;
+    color: var(--dark-color);
+    margin-left: -15rem;
+}
+
+.third-content p {
+    font-size: 1.2rem;
+    color: var(--light-color);
+}
+
+/* end of third content */
+/* start of fourth content */
+.fourth-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.fourth-content .box1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+    background-color: var(--v-light-color);
+    padding: 1rem;
+    line-height: 1.7;
+}
+
+.fourth-content .one {
+    grid-column: span 2;
+}
+
+.fourth-content .two {
+    grid-row: span 2;
+}
+
+@media (max-width:900px) {
+    .fourth-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+/* end of fourth content */
+/* start  fifth content */
+.fifth-content1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+    font-size: 1.2rem;
+    background-color: var(--v-light-color);
+    padding: 1rem;
+    margin: 0 8rem;
+    margin-bottom: 2rem;
+}
+
+.fifth-content1 img {
+    width: 200px;
+}
+
+@media (max-width:850px) {
+    .fifth-content1 {
+        flex-direction: column;
+        margin: 1rem 0;
+    }
+}
+
+/* end of fifth content */
+/* start of 6 content  */
+.sixth-content {
+    text-align: center;
+    margin: 5rem auto;
+    padding: .5rem;
+    line-height: .7;
+
+}
+
+.sixth-content h2 {
+    font-size: 4rem;
+    color: var(--dark-color);
+    margin-left: -15rem;
+}
+
+.sixth-content p {
+    font-size: 1.2rem;
+    color: var(--light-color);
+}
+
+/* end of 6 content  */
+/* start of 7 content  */
+.seventh-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+}
+
+
+.seventh-content .box {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--v-light-color);
+    padding: 1rem;
+}
+
+.seventh-content .box i {
+    font-size: 2rem;
+}
+
+@media (max-width:850px) {
+    .seventh-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .seventh-content img {
+        margin: .2rem auto;
+        transform: translateX(-50%);
+        position: absolute;
+        left: 50%;
+
+
+    }
+}
+
+/* end of 7 content */
+/* start of 8 content */
+.eight-content {
+    text-align: center;
+    margin: 5rem auto;
+    padding: .5rem;
+    line-height: .7;
+
+}
+
+.eight-content h2 {
+    font-size: 4rem;
+    color: var(--dark-color);
+    margin-left: -10rem;
+}
+
+.eight-content p {
+    font-size: 1.2rem;
+    color: var(--light-color);
+}
+
+/* end of 8 content */
+/* start of 9 content */
+.nine-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--v-light-color);
+
+}
+
+.nine-content .links ul {
+    display: flex;
+    gap: 1.2rem;
+    font-size: 2rem;
+}
+
+.nine-content .links ul li {
+    transition: .4s ease-in-out;
+}
+
+.nine-content .links ul li:hover {
+    transform: scale(1.5);
+}
+
+@media (max-width:570px) {
+    .nine-content ul {
+        flex-direction: column;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .first-content ul {
+        flex-direction: column;
+    }
+
+    .eight-content h2 {
+        margin-left: auto;
+        font-size: 3rem;
+    }
+
+    .sixth-content h2 {
+        margin-left: auto;
+        font-size: 3rem;
+    }
+
+    .third-content h2 {
+        margin-left: auto;
+        font-size: 3rem;
+    }
+
+
+
+}
+
+.nine-content p {
+    align-self: self-end;
+    font-size: 1.2rem;
+    margin-left: 1.2rem;
+    color: var(--dark-color);
+    padding: .5rem;
+}
+
+.nine-content .up {
+    font-size: 2rem;
+}
+
+/* end of 9 content */
